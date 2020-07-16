@@ -1,0 +1,33 @@
+.toaster {
+  border-radius: 8px;
+  height: 40px;
+  background-color: rgba(51, 51, 51, 0.9);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0, 1px 8px 0 rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  top: 1em;
+  right: 3em;
+  z-index: 1;
+  text-align: center;
+  padding: .5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rightToleft 2s ease-in, FadeAnimation 4s ease-in 4s forwards;
+
+  @keyframes rightToleft {
+    from { right: 0;}
+    to{ right : 3em;}
+  }
+  @keyframes FadeAnimation {
+    from { 
+      opacity: 1;
+      visibility: visible;
+    }
+    to{ 
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
